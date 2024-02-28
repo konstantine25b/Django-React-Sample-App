@@ -1,11 +1,8 @@
-
 from django.contrib import admin
-from django.urls import path , include
-from django.conf.urls import url
-from app.views import *
-
+from django.urls import path
+from app.views import ReactView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' , ReactView.as_view() , name = "anything")
+    path('', ReactView.as_view(), name="anything"),
 ]
